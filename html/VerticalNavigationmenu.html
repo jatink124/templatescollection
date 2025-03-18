@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Portfolio Navigation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+    
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    .sidebar {
+      width: 280px;
+      min-height: 100vh;
+      background-color: #FCEB75;
+      border-right: 1px solid #e2e2e2;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    nav {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    
+    ul {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      list-style-type: none;
+    }
+    
+    .nav-item {
+      padding: 12px 16px;
+      border-left: 2px solid transparent;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .nav-item.active {
+      border-left: 2px solid #333;
+      background-color: rgba(204, 181, 86, 0.6);
+    }
+    
+    .nav-item:hover:not(.active) {
+      border-left: 2px solid #999;
+      background-color: rgba(204, 181, 86, 0.2);
+    }
+    
+    .nav-link {
+      display: block;
+      width: 100%;
+      color: #333;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+    }
+    
+    .nav-id {
+      display: inline-block;
+      min-width: 24px;
+      margin-right: 8px;
+    }
+    
+    .contact-info {
+      margin-top: 2rem;
+      padding: 12px 16px;
+      color: #333;
+      border-top: 1px solid #e2e2e2;
+    }
+    
+    .contact-item {
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    .main-content {
+      flex: 1;
+      padding: 32px;
+      background-color: white;
+    }
+    
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+    
+    p {
+      font-size: 1.125rem;
+      color: #555;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+      from { transform: translateX(-10px); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    .slide-in {
+      animation: slideIn 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left navigation -->
+    <div class="sidebar">
+      <nav>
+        <ul>
+          <li class="nav-item active slide-in">
+            <a href="#01" class="nav-link">
+              <span class="nav-id">01</span>TOP
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#02" class="nav-link">
+              <span class="nav-id">02</span>ABOUT ME
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#03" class="nav-link">
+              <span class="nav-id">03</span>MY SERVICES
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#04" class="nav-link">
+              <span class="nav-id">04</span>SKILLS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#05" class="nav-link">
+              <span class="nav-id">05</span>FACTS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#06" class="nav-link">
+              <span class="nav-id">06</span>EXPERIENCES
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#07" class="nav-link">
+              <span class="nav-id">07</span>PROJECTS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#08" class="nav-link">
+              <span class="nav-id">08</span>HOW I WORK
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#09" class="nav-link">
+              <span class="nav-id">09</span>BLOGS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#10" class="nav-link">
+              <span class="nav-id">10</span>TESTIMONIALS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#11" class="nav-link">
+              <span class="nav-id">11</span>CONTACT
+            </a>
+          </li>
+        </ul>
+        
+        <div class="contact-info">
+          <div class="contact-item">emily@devis.com</div>
+          <div class="contact-item">+420 652 887 351</div>
+        </div>
+      </nav>
+    </div>
+    
+    <!-- Main content -->
+    <div class="main-content">
+      <h1>Welcome</h1>
+      <p>
+        Select a section from the navigation menu to get started.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click event to all nav items
+      const navItems = document.querySelectorAll('.nav-item');
+      
+      navItems.forEach(item => {
+        item.addEventListener('click', function() {
+          // Remove active class from all items
+          navItems.forEach(i => i.classList.remove('active', 'slide-in'));
+          
+          // Add active class to clicked item
+          this.classList.add('active', 'slide-in');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Emily Davis</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFDC5F;
+        }
+        
+        .container {
+            position: relative;
+            padding: 60px 80px;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20vw;
+            font-weight: bold;
+            color: rgba(255, 220, 95, 0.3);
+            line-height: 0.9;
+            z-index: 0;
+        }
+        
+        .vertical-line {
+            position: absolute;
+            width: 2px;
+            height: 200px;
+            background-color: #000;
+            left: 35px;
+            top: 60px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 80px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+        
+        .description-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        
+        .bio {
+            flex: 2;
+        }
+        
+        .bio h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .bio p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .info-item h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        
+        .info-item p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        
+        .experience-box {
+            flex: 1;
+            border: 2px solid #000;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            max-width: 300px;
+        }
+        
+        .experience-box .number {
+            font-size: 120px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .experience-box .label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .stacked-papers {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #000;
+            top: 7px;
+            left: 7px;
+            z-index: -1;
+        }
+        
+        .stacked-papers:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #000;
+            top: 7px;
+            left: 7px;
+            z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="watermark">ABOUT ME</div>
+        <div class="vertical-line"></div>
+        
+        <div class="content">
+            <div class="subtitle">Some Word About Me</div>
+            <h1 class="title">Know Me More</h1>
+            
+            <div class="description-area">
+                <div class="bio">
+                    <h2>I'm Emily Davis, a Web Developer</h2>
+                    <p>I'm a designer & developer with a passion for web design. I enjoy developing simple, clean and slick websites that provide real value to the end user. Thousands of clients have procured exceptional results while working with me. Delivering work within time and budget which meets client's requirements is our motto.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <h3>Email:</h3>
+                            <p>chat@portify.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Date of Birth:</h3>
+                            <p>11 November, 1987</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Email:</h3>
+                            <p>Los Angeles, California</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-box">
+                    <div class="stacked-papers"></div>
+                    <div class="number">10</div>
+                    <div class="label">Years of experience</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

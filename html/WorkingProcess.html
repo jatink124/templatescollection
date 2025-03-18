@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Working Process</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFDC5F;
+        }
+        
+        .container {
+            position: relative;
+            padding: 60px 80px;
+            overflow: hidden;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 18vw;
+            font-weight: bold;
+            color: rgba(255, 220, 95, 0.3);
+            line-height: 0.9;
+            z-index: 0;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 80px;
+        }
+        
+        .process-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        
+        .step-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px;
+            background-color: transparent;
+        }
+        
+        .step-number {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .step-name {
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .step-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        
+        .step-dot.left {
+            left: -4px;
+            top: 50%;
+        }
+        
+        .step-dot.right {
+            right: -4px;
+            top: 50%;
+        }
+        
+        .connector {
+            position: absolute;
+            height: 1px;
+            background-color: #000;
+            top: 50%;
+            width: 30px;
+        }
+        
+        .connector.right {
+            right: -30px;
+        }
+        
+        .connector.left {
+            left: -30px;
+        }
+        
+        .dashed-circle {
+            position: absolute;
+            width: 148px;
+            height: 148px;
+            border-radius: 50%;
+            border: 1px dashed #000;
+            top: 0;
+            left: 0;
+        }
+        
+        .vertical-line {
+            position: absolute;
+            width: 2px;
+            height: 100vh;
+            background-color: #000;
+            left: 15px;
+            top: 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="vertical-line"></div>
+        <div class="watermark">HOW I WORK</div>
+        
+        <div class="content">
+            <div class="subtitle">How I Work</div>
+            <h1 class="title">My Working Process</h1>
+            
+            <div class="process-container">
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-circle">
+                        <div class="step-number">01.</div>
+                        <div class="step-name">IDEA</div>
+                    </div>
+                    <div class="step-dot left"></div>
+                    <div class="step-dot right"></div>
+                    <div class="connector right"></div>
+                    <div class="dashed-circle"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-circle">
+                        <div class="step-number">02.</div>
+                        <div class="step-name">SKETCH</div>
+                    </div>
+                    <div class="step-dot left"></div>
+                    <div class="step-dot right"></div>
+                    <div class="connector left"></div>
+                    <div class="connector right"></div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-circle">
+                        <div class="step-number">03.</div>
+                        <div class="step-name">DESIGN</div>
+                    </div>
+                    <div class="step-dot left"></div>
+                    <div class="step-dot right"></div>
+                    <div class="connector left"></div>
+                    <div class="connector right"></div>
+                    <div class="dashed-circle"></div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="step-circle">
+                        <div class="step-number">04.</div>
+                        <div class="step-name">DEVELOP</div>
+                    </div>
+                    <div class="step-dot left"></div>
+                    <div class="step-dot right"></div>
+                    <div class="connector left"></div>
+                    <div class="connector right"></div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="process-step">
+                    <div class="step-circle">
+                        <div class="step-number">05.</div>
+                        <div class="step-name">TEST</div>
+                    </div>
+                    <div class="step-dot left"></div>
+                    <div class="step-dot right"></div>
+                    <div class="connector left"></div>
+                    <div class="connector right"></div>
+                    <div class="dashed-circle"></div>
+                </div>
+                
+                <!-- Step 6 -->
+                <div class="process-step">
+                    <div class="step-circle">
+                        <div class="step-number">06.</div>
+                        <div class="step-name">LAUNCH</div>
+                    </div>
+                    <div class="step-dot left"></div>
+                    <div class="connector left"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

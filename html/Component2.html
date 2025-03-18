@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFDC5F;
+        }
+        
+        .container {
+            position: relative;
+            padding: 60px 80px;
+            overflow: hidden;
+        }
+        
+        .watermark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 18vw;
+            font-weight: bold;
+            color: rgba(255, 220, 95, 0.3);
+            line-height: 0.9;
+            z-index: 0;
+        }
+        
+        .vertical-line {
+            position: absolute;
+            width: 2px;
+            height: 200px;
+            background-color: #000;
+            left: 35px;
+            top: 60px;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+            padding-left: 60px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 80px;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 60px;
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 60px;
+            max-width: 1000px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .stat-number {
+            font-size: 120px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+        }
+        
+        .stat-label {
+            font-size: 20px;
+            font-weight: bold;
+            padding-top: 10px;
+            position: relative;
+        }
+        
+        .stat-label::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="watermark">MY FACTS</div>
+        <div class="vertical-line"></div>
+        
+        <div class="content">
+            <div class="subtitle">Some Interesting Facts About Me</div>
+            <h1 class="title">Fun Facts</h1>
+            
+            <div class="stats-container">
+                <!-- Stat 1 -->
+                <div class="stat-item">
+                    <div class="stat-number">145</div>
+                    <div class="stat-label">Finished Projects</div>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="stat-item">
+                    <div class="stat-number">128</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="stat-item">
+                    <div class="stat-number">865</div>
+                    <div class="stat-label">Working Hours</div>
+                </div>
+                
+                <!-- Stat 4 -->
+                <div class="stat-item">
+                    <div class="stat-number">232</div>
+                    <div class="stat-label">Coffe Cups</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

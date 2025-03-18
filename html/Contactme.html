@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikolas Raio - Web Designer</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            min-height: 100vh;
+            position: relative;
+        }
+        .profile-photo {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .profile-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .info-columns {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .info-column {
+            padding: 40px;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .corner-icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            color: #FFC548;
+        }
+        .top-left {
+            top: 20px;
+            left: 20px;
+        }
+        .top-right {
+            top: 20px;
+            right: 20px;
+        }
+        .bottom-left {
+            bottom: 20px;
+            left: 20px;
+        }
+        .bottom-right {
+            bottom: 20px;
+            right: 20px;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+        }
+        .text-right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Corner Icons -->
+        <div class="corner-icon top-left">+</div>
+        <div class="corner-icon top-right">+</div>
+        <div class="corner-icon bottom-left">+</div>
+        <div class="corner-icon bottom-right">+</div>
+        
+        <div class="info-columns">
+            <!-- Left Column - Top -->
+            <div class="info-column">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-content">
+                    Hello, my name's Nikolas, I'm a web designer and developer. Duis dolor in reprehenderit velit th esse cillum fugiat nulla pariatur.
+                </p>
+            </div>
+            
+            <!-- Left Column - Bottom -->
+            <div class="info-column">
+                <h2 class="section-title">What I Do</h2>
+                <p class="section-content">
+                    Website Design & Logo / Mobile Application Design / UI/UX Mobile Design / Web Developments / Brand identity
+                </p>
+            </div>
+        </div>
+        
+        <!-- Center - Profile Photo -->
+        <div class="profile-photo">
+            <img src="https://nikolas-next.vercel.app/img/hero/1.png" alt="Nikolas Raio - Web Designer">
+        </div>
+        
+        <div class="info-columns">
+            <!-- Right Column - Top -->
+            <div class="info-column text-right">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-content">
+                    Address: 45 Kofi Annan St, Ghana<br>
+                    Email: contact@example.com<br>
+                    nikolasraio@gmail.com<br>
+                    Telephone number: 004-400-45
+                </p>
+            </div>
+            
+            <!-- Right Column - Bottom -->
+            <div class="info-column text-right">
+                <h2 class="section-title">Find With Me</h2>
+                <div class="social-icons">
+                    <div class="social-icon">f</div>
+                    <div class="social-icon">t</div>
+                    <div class="social-icon">ig</div>
+                    <div class="social-icon">in</div>
+                    <div class="social-icon">Be</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

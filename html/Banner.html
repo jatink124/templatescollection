@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Raio - Web Designer</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+        }
+        .hello-text {
+            font-size: 5rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+        }
+        .name {
+            font-size: 8rem;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
+        .flex-row {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: white;
+            position: relative;
+        }
+        .line::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            transform: rotate(45deg);
+        }
+        .title {
+            font-size: 6rem;
+            font-weight: bold;
+            text-align: right;
+        }
+        .location {
+            font-size: 4rem;
+            text-transform: uppercase;
+            text-align: right;
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="hello-text">Hello World! I'm</h2>
+        <h1 class="name">NICOLAS RAIO</h1>
+        
+        <div class="flex-row">
+            <div class="line"></div>
+            <div>
+                <div class="title">WEB DESIGNER</div>
+                <div class="location">BASED IN GHANA</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
